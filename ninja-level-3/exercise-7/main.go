@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	x := "time machine"
+	x := "machine time"
 	if x == "time machine" {
 		fmt.Println(x)
 	} else if x == "machine time" {
