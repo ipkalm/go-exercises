@@ -8,6 +8,7 @@ func main() {
 		`moneypenny_miss`: []string{`James Bond`, `Literature`, `Computer Science`},
 		`no_dr`:           []string{`Being evil`, `Ice cream`, `Sunsets`},
 	}
+	x[`rabbit`] = []string{`parrot`, `running`, `love`}
 
 	for k, v := range x {
 		fmt.Println("record :: ", k)
