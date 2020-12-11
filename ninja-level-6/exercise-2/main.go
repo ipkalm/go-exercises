@@ -4,28 +4,22 @@ import "fmt"
 
 func main() {
 	x := []int{1, 2, 3}
-	fmt.Println(foo(1, 2, 3))
+	fmt.Println(foo(x...))
 	fmt.Println(bar(x))
 }
 
 func foo(x ...int) int {
-	var z []int
-
-	for _, v := range x {
-		z = append(z, v)
-	}
-
 	sum := 0
-	for _, v := range z {
+	for _, v := range x {
 		sum += v
 	}
 
 	return sum
 }
 
-func bar(i []int) int {
+func bar(x []int) int {
 	sum := 0
-	for _, v := range i {
+	for _, v := range x {
 		sum += v
 	}
 	return sum
