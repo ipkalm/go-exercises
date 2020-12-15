@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"log"
 )
@@ -25,13 +24,11 @@ func main() {
 
 func sqrt(f float64) (float64, error) {
 	if f < 0 {
-		// write your error code here
 		err := sqrtError{
 			lat:  "50",
 			long: "99",
-			err:  errors.New("that is err"),
+			err:  fmt.Errorf("that is err. value: %v", f),
 		}
-
 		return f, err
 	}
 	return 42, nil
