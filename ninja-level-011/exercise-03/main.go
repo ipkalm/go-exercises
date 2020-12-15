@@ -19,5 +19,6 @@ func main() {
 }
 
 func foo(e error) {
+	fmt.Println("assortion:", e.(*customErr).addInfo) // write (TYPE) correctly, it may be non-pointer like (customErr) or pointer (*customErr)
 	log.Fatalln(e)
 }
