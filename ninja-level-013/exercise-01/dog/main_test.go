@@ -55,6 +55,12 @@ func BenchmarkYears(b *testing.B) {
 	}
 }
 
+func BenchmarkYearsTwo(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		YearsTwo(7)
+	}
+}
+
 func ExampleYears() {
 	fmt.Println(Years(70))
 	// Output:
