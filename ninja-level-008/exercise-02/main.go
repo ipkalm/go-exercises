@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+// Person describe human name, age
+// and favourite phrases
 type Person struct {
 	First   string
 	Last    string
